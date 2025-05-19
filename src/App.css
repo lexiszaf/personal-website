@@ -47,3 +47,12 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+.profile-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0px rgba(225, 29, 72, 0); /* #e11d48 transparent */
+}
+
+.profile-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(225, 29, 72, 0.4); /* soft pink glow */
+}
