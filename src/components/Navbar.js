@@ -8,7 +8,7 @@ function Navbar() {
         <ul style={styles.navList}>
           <li><Link to="/" style={styles.link}>Home</Link></li>
           <li><Link to="/about" style={styles.link}>About</Link></li>
-          <li><a href="#projects" style={styles.link}>Projects</a></li>
+          <li><Link to="/projects" style={styles.link}>Projects</Link></li>
           <li><a href="#resume" style={styles.link}>Resume</a></li>
           <li><a href="#contact" style={styles.link}>Contact</a></li>
         </ul>
