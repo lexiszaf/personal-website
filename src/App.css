@@ -56,3 +56,11 @@ a:hover::after {
   transform: scale(1.08);
   box-shadow: 0 0 12px rgba(225, 29, 72, 0.4); /* soft pink glow */
 }
+
+.project-button::after {
+  display: none !important;
+}
+
+.project-button:hover {
+  color: white !important;
+}
