@@ -64,3 +64,35 @@ a:hover::after {
 .project-button:hover {
   color: white !important;
 }
+
+.resume-image {
+  transition: transform 0.3s ease;
+}
+
+.resume-image:hover {
+  transform: scale(1.02);
+}
+
+.resume-pdf {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.resume-pdf:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-link:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+input:focus, textarea:focus {
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
