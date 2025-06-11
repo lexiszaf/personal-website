@@ -96,3 +96,40 @@ input:focus, textarea:focus {
   border-color: #4f46e5 !important;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
+
+/* PhotoCarousel Styles */
+.carousel-section {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-card {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.inactive-image-card {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.active-image-card {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.active-carousel-image {
+  animation: none;
+}
+
+@keyframes subtle-pulse {
+  from { box-shadow: 0 0 0 2px #4f46e5, 0 4px 15px rgba(0, 0, 0, 0.1); }
+  to { box-shadow: 0 0 0 2px #4f46e5, 0 4px 20px rgba(0, 0, 0, 0.15); }
+}
+
+@keyframes subtle-zoom {
+  0% { transform: scale(1) translateX(0); }
+  50% { transform: scale(1.03) translateX(1%); }
+  100% { transform: scale(1) translateX(0); }
+}
