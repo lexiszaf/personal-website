@@ -44,7 +44,7 @@ function Contact() {
               📧 lexiszaf@gmail.com
             </a>
             <a 
-              href="https://www.linkedin.com/in/alexa-szafranski" 
+              href="https://www.linkedin.com/in/lexi-szafranski" 
               target="_blank" 
               rel="noopener noreferrer" 
               style={styles.socialLink}

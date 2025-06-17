@@ -77,17 +77,25 @@ const styles = {
     top: 0,
     height: '100%',
     willChange: 'transform',
+    gap: '-20px',
   },
   imageCard: {
-    flex: '0 0 33.333%',
+    flex: '0 0 35%',
     height: '100%',
     padding: '0 10px',
     boxSizing: 'border-box',
+    transform: 'scale(0.95)',
+    transition: 'transform 0.3s ease',
+    '&:hover': {
+      transform: 'scale(1)',
+    },
   },
   image: {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   },
 };
 
