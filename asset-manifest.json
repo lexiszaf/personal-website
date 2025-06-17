@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.a0905e72.css",
-    "main.js": "/personal-website/static/js/main.24ae8504.js",
-    "static/media/photo1.jpg": "/personal-website/static/media/photo1.9400e362e5e7ae65ffb0.jpg",
-    "static/media/lexi-headshot.jpg": "/personal-website/static/media/lexi-headshot.d474e9a6d90d3a8d4456.jpg",
-    "static/media/photo3.jpg": "/personal-website/static/media/photo3.f23bc9222af43a8fb219.jpg",
-    "static/media/photo5.jpg": "/personal-website/static/media/photo5.b5bfef1085ad2fb80154.jpg",
-    "static/media/photo2.jpg": "/personal-website/static/media/photo2.292c3483ed4fcae88201.jpg",
-    "static/media/photo6.jpg": "/personal-website/static/media/photo6.fe1fc1f9e9c58a66444e.jpg",
-    "static/media/photo4.jpg": "/personal-website/static/media/photo4.cdf0437311af2739fc01.jpg",
-    "static/media/ezvote.png": "/personal-website/static/media/ezvote.6001f0364542d2b32a4b.png",
-    "static/media/resume.pdf": "/personal-website/static/media/resume.ab3d77f73db9a190c3c1.pdf",
-    "static/media/pharmafriend.png": "/personal-website/static/media/pharmafriend.18e44e8ef99771ef4477.png",
-    "static/media/avltree.png": "/personal-website/static/media/avltree.5166b82c900534c65cec.png",
-    "index.html": "/personal-website/index.html",
-    "main.a0905e72.css.map": "/personal-website/static/css/main.a0905e72.css.map",
-    "main.24ae8504.js.map": "/personal-website/static/js/main.24ae8504.js.map"
+    "main.css": "/static/css/main.a0905e72.css",
+    "main.js": "/static/js/main.3a348719.js",
+    "static/media/photo1.jpg": "/static/media/photo1.9400e362e5e7ae65ffb0.jpg",
+    "static/media/lexi-headshot.jpg": "/static/media/lexi-headshot.d474e9a6d90d3a8d4456.jpg",
+    "static/media/photo3.jpg": "/static/media/photo3.f23bc9222af43a8fb219.jpg",
+    "static/media/photo5.jpg": "/static/media/photo5.b5bfef1085ad2fb80154.jpg",
+    "static/media/photo2.jpg": "/static/media/photo2.292c3483ed4fcae88201.jpg",
+    "static/media/photo6.jpg": "/static/media/photo6.fe1fc1f9e9c58a66444e.jpg",
+    "static/media/photo4.jpg": "/static/media/photo4.cdf0437311af2739fc01.jpg",
+    "static/media/ezvote.png": "/static/media/ezvote.6001f0364542d2b32a4b.png",
+    "static/media/resume.pdf": "/static/media/resume.ab3d77f73db9a190c3c1.pdf",
+    "static/media/pharmafriend.png": "/static/media/pharmafriend.18e44e8ef99771ef4477.png",
+    "static/media/avltree.png": "/static/media/avltree.5166b82c900534c65cec.png",
+    "index.html": "/index.html",
+    "main.a0905e72.css.map": "/static/css/main.a0905e72.css.map",
+    "main.3a348719.js.map": "/static/js/main.3a348719.js.map"
   },
   "entrypoints": [
     "static/css/main.a0905e72.css",
-    "static/js/main.24ae8504.js"
+    "static/js/main.3a348719.js"
   ]
 }
