@@ -1,16 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/thesis', label: 'Research' },
+    { to: '/resume', label: 'Resume' },
+    { to: '/contact', label: 'Contact' },
+  ];
+
   return (
-    <nav style={styles.nav}>
+    <nav style={{
+      ...styles.nav,
+      borderBottom: scrolled ? '1px solid #e4e4e7' : '1px solid transparent',
+      backdropFilter: scrolled ? 'blur(8px)' : 'none',
+      backgroundColor: scrolled ? 'rgba(255,255,255,0.92)' : '#ffffff',
+    }}>
       <div style={styles.container}>
-        <span style={styles.logo}>Lexi Szafranski - Aspiring Technologist</span>
+        <Link to="/" style={styles.logo}>Lexi Szafranski</Link>
         <ul style={styles.navList}>
-          <li><Link to="/" style={styles.link}>Home</Link></li>
-          <li><Link to="/about" style={styles.link}>About</Link></li>
-          <li><Link to="/projects" style={styles.link}>Projects</Link></li>
-          <li><Link to="/resume" style={styles.link}>Resume</Link></li>
-          <li><Link to="/contact" style={styles.link}>Contact</Link></li>
+          {navLinks.map(({ to, label }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                style={{
+                  ...styles.link,
+                  color: location.pathname === to ? '#18181b' : '#71717a',
+                  fontWeight: location.pathname === to ? '500' : '400',
+                }}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
@@ -22,41 +55,40 @@ const styles = {
     position: 'fixed',
     top: 0,
     width: '100%',
-    backgroundColor: '#ffffff',
-    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
     zIndex: 1000,
+    transition: 'border-color 0.2s ease, background-color 0.2s ease',
   },
   container: {
-    maxWidth: '1200px',
+    maxWidth: '1100px',
     margin: '0 auto',
-    padding: '12px 24px',
+    padding: '0 32px',
+    height: '60px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   logo: {
-  fontFamily: "'Pacifico', cursive",
-  fontSize: '1.5rem',
-  color: '#4f46e5', 
-  fontWeight: 600,
-  fontSize: '1.3rem',
-  letterSpacing: '0.5px',
-  cursor: 'pointer',
-  textDecoration: 'none',
-},
+    fontFamily: "'Playfair Display', Georgia, serif",
+    fontSize: '1.15rem',
+    fontWeight: '600',
+    color: '#18181b',
+    textDecoration: 'none',
+    letterSpacing: '-0.01em',
+  },
   navList: {
     display: 'flex',
     listStyle: 'none',
-    gap: '1.5rem',
+    gap: '2rem',
     margin: 0,
     padding: 0,
+    alignItems: 'center',
   },
   link: {
     textDecoration: 'none',
-    color: '#333',
-    fontSize: '1rem',
-    position: 'relative',
-  }
+    fontSize: '0.88rem',
+    transition: 'color 0.15s ease',
+    letterSpacing: '0.01em',
+  },
 };
 
 export default Navbar;

@@ -3,97 +3,78 @@ import resumePdf from '../assets/resume.pdf';
 
 function Resume() {
   return (
-    <section id="resume" style={styles.section}>
-      <h2 style={styles.heading}>
-        Here's My Resume
-        <span style={styles.headingUnderline}></span>
-      </h2>
-      <div style={styles.resumeContainer}>
-        <iframe
-          src={resumePdf}
-          title="Lexi Szafranski's Resume"
-          style={styles.resumePdf}
-          className="resume-pdf"
-        />
-        <a 
-          href={resumePdf} 
-          download="Lexi_Szafranski_Resume.pdf"
-          style={styles.downloadButton}
-          className="project-button"
-        >
-          Download Resume
-        </a>
-      </div>
-    </section>
+    <div style={styles.page}>
+      <section style={styles.hero}>
+        <div style={styles.sectionInner}>
+          <span className="section-label">Experience</span>
+          <h1 style={styles.heroTitle} className="display-heading">Resume</h1>
+          <span className="accent-line" />
+        </div>
+      </section>
+
+      <section style={styles.section}>
+        <div style={styles.sectionInner}>
+          <div style={styles.resumeCard}>
+            <iframe
+              src={resumePdf}
+              title="Lexi Szafranski's Resume"
+              style={styles.iframe}
+            />
+          </div>
+          <div style={styles.downloadRow}>
+            <a
+              href={resumePdf}
+              download="Lexi_Szafranski_Resume.pdf"
+              className="btn-primary"
+            >
+              Download PDF →
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 
 const styles = {
-  section: {
-    padding: '80px 20px',
-    backgroundColor: '#f8fafc',
-    textAlign: 'center',
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  heading: {
-    fontSize: '2.5rem',
-    marginBottom: '60px',
-    color: '#4f46e5',
-    fontWeight: '700',
-    position: 'relative',
-    display: 'inline-block',
-    paddingBottom: '15px',
-    fontFamily: "'Poppins', sans-serif",
-  },
-  headingUnderline: {
-    position: 'absolute',
-    bottom: 0,
-    left: '50%',
-    transform: 'translateX(-50%)',
-    width: '60px',
-    height: '3px',
-    backgroundColor: '#4f46e5',
-    borderRadius: '2px',
-  },
-  resumeContainer: {
-    maxWidth: '1000px',
-    width: '90%',
-    margin: '0 auto',
+  page: {
+    paddingTop: '60px',
     backgroundColor: '#ffffff',
-    borderRadius: '16px',
-    padding: '40px',
-    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '20px',
   },
-  resumePdf: {
+  hero: {
+    padding: '72px 0 48px',
+    borderBottom: '1px solid #e4e4e7',
+    backgroundColor: '#fafafa',
+  },
+  sectionInner: {
+    maxWidth: '1100px',
+    margin: '0 auto',
+    padding: '0 32px',
+  },
+  section: {
+    padding: '64px 0',
+  },
+  heroTitle: {
+    fontSize: 'clamp(2.2rem, 5vw, 3.4rem)',
+    marginTop: '8px',
+  },
+  resumeCard: {
+    border: '1px solid #e4e4e7',
+    borderRadius: '10px',
+    overflow: 'hidden',
+    backgroundColor: '#ffffff',
+    boxShadow: '0 2px 8px -2px rgba(0,0,0,0.06)',
+  },
+  iframe: {
     width: '100%',
     height: '800px',
     border: 'none',
-    borderRadius: '8px',
+    display: 'block',
   },
-  downloadButton: {
-    display: 'inline-block',
-    textDecoration: 'none',
-    backgroundColor: '#4f46e5',
-    color: 'white',
-    padding: '12px 24px',
-    borderRadius: '25px',
-    fontWeight: '600',
-    fontSize: '1rem',
-    letterSpacing: '0.025em',
-    transition: 'all 0.3s ease',
-    boxShadow: '0 4px 6px -1px rgba(79, 70, 229, 0.2), 0 2px 4px -1px rgba(79, 70, 229, 0.1)',
-    '&:hover': {
-      backgroundColor: '#4338ca',
-      transform: 'translateY(-2px)',
-      boxShadow: '0 10px 15px -3px rgba(79, 70, 229, 0.3), 0 4px 6px -2px rgba(79, 70, 229, 0.1)',
-    },
+  downloadRow: {
+    marginTop: '24px',
+    display: 'flex',
+    justifyContent: 'center',
   },
 };
 

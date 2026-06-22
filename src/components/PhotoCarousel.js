@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
-// Import images directly from the assets folder
+import React from 'react';
 import photo1 from '../assets/photo1.jpg';
 import photo2 from '../assets/photo2.jpg';
 import photo3 from '../assets/photo3.jpg';
@@ -11,30 +9,13 @@ import photo6 from '../assets/photo6.jpg';
 const images = [photo1, photo2, photo3, photo4, photo5, photo6];
 
 function PhotoCarousel() {
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setOffset(prev => (prev - 1) % 100);
-    }, 500);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section style={styles.carouselSection}>
-      <div style={styles.carouselContainer}>
-        <div style={{
-          ...styles.imageTrack,
-          transform: `translateX(${offset}%)`
-        }}>
-          {[...images, ...images].map((image, index) => (
-            <div key={index} style={styles.imageCard}>
-              <img 
-                src={image} 
-                alt={`Photo ${index + 1}`} 
-                style={styles.image}
-              />
+    <section style={styles.section}>
+      <div style={styles.wrapper}>
+        <div style={styles.track} className="carousel-track">
+          {[...images, ...images].map((src, i) => (
+            <div key={i} style={styles.card}>
+              <img src={src} alt="" style={styles.image} />
             </div>
           ))}
         </div>
@@ -44,59 +25,36 @@ function PhotoCarousel() {
 }
 
 const styles = {
-  carouselSection: {
-    padding: '0',
-    backgroundColor: '#f8fafc',
-    textAlign: 'center',
-    minHeight: '600px',
-    display: 'flex',
-    alignItems: 'flex-end',
-    justifyContent: 'center',
+  section: {
     overflow: 'hidden',
-    width: '100vw',
-    marginLeft: 'calc(-50vw + 50%)',
-    marginRight: 'calc(-50vw + 50%)',
-    marginTop: 'auto',
-    paddingBottom: '0',
-    position: 'relative',
-    bottom: '-100px',
-    marginBottom: '100px',
+    borderTop: '1px solid #e4e4e7',
+    borderBottom: '1px solid #e4e4e7',
+    backgroundColor: '#fafafa',
   },
-  carouselContainer: {
+  wrapper: {
+    overflow: 'hidden',
     width: '100%',
-    height: '500px',
-    position: 'relative',
-    overflow: 'hidden',
-    backgroundColor: '#ffffff',
-    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
   },
-  imageTrack: {
+  track: {
     display: 'flex',
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    height: '100%',
-    willChange: 'transform',
-    gap: '-20px',
+    gap: '12px',
+    padding: '20px 0',
+    width: 'max-content',
   },
-  imageCard: {
-    flex: '0 0 35%',
-    height: '100%',
-    padding: '0 10px',
-    boxSizing: 'border-box',
-    transform: 'scale(0.95)',
-    transition: 'transform 0.3s ease',
-    '&:hover': {
-      transform: 'scale(1)',
-    },
+  card: {
+    width: '380px',
+    height: '280px',
+    flexShrink: 0,
+    borderRadius: '8px',
+    overflow: 'hidden',
+    border: '1px solid #e4e4e7',
   },
   image: {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    display: 'block',
   },
 };
 
-export default PhotoCarousel; 
+export default PhotoCarousel;
