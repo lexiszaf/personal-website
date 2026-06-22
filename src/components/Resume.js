@@ -1,5 +1,5 @@
 import React from 'react';
-import resumePdf from '../assets/resume.pdf';
+
 
 function Resume() {
   return (
@@ -15,15 +15,17 @@ function Resume() {
       <section style={styles.section}>
         <div style={styles.sectionInner}>
           <div style={styles.resumeCard}>
-            <iframe
-              src={resumePdf}
-              title="Lexi Szafranski's Resume"
+            <object
+              data="/resume.pdf"
+              type="application/pdf"
               style={styles.iframe}
-            />
+            >
+              <embed src="/resume.pdf" type="application/pdf" style={styles.iframe} />
+            </object>
           </div>
           <div style={styles.downloadRow}>
             <a
-              href={resumePdf}
+              href="/resume.pdf"
               download="Lexi_Szafranski_Resume.pdf"
               className="btn-primary"
             >
