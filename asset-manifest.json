@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0ea1fde9.css",
-    "main.js": "/static/js/main.3368e44a.js",
+    "main.js": "/static/js/main.9283fed8.js",
     "static/media/lexi-headshot.JPG": "/static/media/lexi-headshot.df9c43e997ad1d6f7e8a.JPG",
     "static/media/ezvote.png": "/static/media/ezvote.6001f0364542d2b32a4b.png",
     "static/media/assessly-team.jpg": "/static/media/assessly-team.ba4bc4c35d62c73e9938.jpg",
@@ -9,10 +9,10 @@
     "static/media/avltree.png": "/static/media/avltree.5166b82c900534c65cec.png",
     "index.html": "/index.html",
     "main.0ea1fde9.css.map": "/static/css/main.0ea1fde9.css.map",
-    "main.3368e44a.js.map": "/static/js/main.3368e44a.js.map"
+    "main.9283fed8.js.map": "/static/js/main.9283fed8.js.map"
   },
   "entrypoints": [
     "static/css/main.0ea1fde9.css",
-    "static/js/main.3368e44a.js"
+    "static/js/main.9283fed8.js"
   ]
 }
