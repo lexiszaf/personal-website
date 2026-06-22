@@ -16,7 +16,6 @@ function Navbar() {
     { to: '/about', label: 'About' },
     { to: '/projects', label: 'Projects' },
     { to: '/thesis', label: 'Research' },
-    { to: '/resume', label: 'Resume' },
     { to: '/contact', label: 'Contact' },
   ];
 
